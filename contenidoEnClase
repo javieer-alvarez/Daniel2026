@@ -1,0 +1,27 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        saludar();
+        int numeroNueve = 9; 
+        int operacion = suma(8,numeroNueve);
+        Console.WriteLine (operacion);
+        int operacion2 = suma(36,numeroNueve);
+        Console.WriteLine (operacion2);
+    }
+    
+    static int suma(int primerNum, int segundoNum){
+        int resultado = primerNum+segundoNum;
+        return resultado;
+    }
+    
+    static void saludar(){
+        Console.WriteLine("Hola, mi nombre es Daniel");
+    }
+    
+}
