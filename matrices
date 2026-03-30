@@ -1,0 +1,55 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        char[] letrasMatematicas = new char[3];
+        letrasMatematicas[0] = 'X';
+        letrasMatematicas[1] = 'Y';
+        letrasMatematicas[2] = 'Z';
+        
+        char[,] tictac = new char[3,3];
+        
+        tictac[0,0] = 'X';
+        tictac[0,1] = 'Y';
+        tictac[0,2] = 'Y';
+        tictac[1,0] = 'Y';
+        tictac[1,1] = 'X';
+        tictac[1,2] = 'Y';
+        tictac[2,0] = 'Y';
+        tictac[2,1] = 'Y';
+        tictac[2,2] = 'X';
+        
+    imprimirMatriz(tictac);
+
+        
+    }
+    //[ , , , , , , , , , ]
+    
+    // | , , , |
+    // | , , , |
+    // | , , , |
+    
+    static void imprimirArray(char[] array){
+        for(int i = 0; i < array.Length; i++){
+            Console.WriteLine(array[i]);
+        }
+    }
+    
+static void imprimirMatriz(char[,] matriz)
+{
+    for (int i = 0; i < matriz.GetLength(0); i++)
+    {
+        for (int j = 0; j < matriz.GetLength(1); j++)
+        {
+            Console.Write($"| {matriz[i, j]} ");
+        }
+        Console.WriteLine("|");
+    }
+}
+    
+}
