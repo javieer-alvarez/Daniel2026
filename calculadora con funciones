@@ -1,0 +1,58 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine ("CALCULADORA ONLINE");
+        Console.WriteLine ("Primer Numero:");
+        float a = float.Parse(Console.ReadLine());
+        Console.WriteLine ("Operacion:");
+        char op = char.Parse(Console.ReadLine());
+        Console.WriteLine ("Segundo Numero:");
+        float b = float.Parse(Console.ReadLine());
+        
+        Console.WriteLine(operacion(a,b,op));
+        
+    }
+    
+    //FUNCIONES
+    public static float suma(float n1, float n2){
+        return n1+n2;
+    } 
+    public static float resta(float n1, float n2){
+        return n1-n2;
+    } 
+    public static float multiplicacion(float n1, float n2){
+        return n1*n2;
+    } 
+    public static float division(float n1, float n2){
+        return n1/n2;
+    } 
+    
+    
+    public static float operacion(float n1, float n2, char operacion) {
+        
+        if(operacion == '+') {
+            return suma(n1,n2);
+        }
+        else if(operacion == '-') {
+            return resta(n1, n2);
+        }
+        else if(operacion == '*') {
+            return multiplicacion(n1, n2);
+        }
+        else if(operacion == '/') {
+            return division(n1, n2);
+        }
+        else {
+            Console.WriteLine("Operacion Inválida");
+        }
+        
+        return 0;
+        
+    }
+}
