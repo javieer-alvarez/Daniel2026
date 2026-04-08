@@ -1,0 +1,30 @@
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        Console.WriteLine("Ingrese un número para determinar que sea primo: ");
+        
+        int n = int.Parse(Console.ReadLine());
+        
+        if(primo(n)){
+            Console.WriteLine("Es Primo");
+        }
+        else {
+            Console.WriteLine("No Es Primo");
+
+        }
+        
+    }
+    
+    //FUNCIONES
+    public static bool primo(int numero){
+        for(int i = 2; i < numero; i++){
+            if(numero%i == 0){
+                return false;
+            }
+        }
+        return true;
+    } 
+}
